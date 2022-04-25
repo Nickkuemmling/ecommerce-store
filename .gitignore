@@ -1,0 +1,5 @@
+# type all of the file names you want Github to ignore
+
+.vscode
+
+designs/
