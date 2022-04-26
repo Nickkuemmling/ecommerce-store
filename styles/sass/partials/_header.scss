@@ -1,26 +1,28 @@
-.footerNav {
-    width: 40%;
+/* _header.scss */
 
-    nav {
-        display: flex;
-        justify-content: space-between;
+header {
+    background-color: $tertiary;
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-        ul {
-            width: 33%;
+    .headerImgContainer {
+        width: 45%;
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
         }
+    }
 
-        a {
-            color: rgba($color: $solidWhite, $alpha: 0.5);
-            font-size: 0.8rem;
-            line-height: 1.5rem;
+    .headerContent {
+        width: 55%;
+        color: $primary;
 
-            &:hover {
-                color: rgba($color: $solidWhite, $alpha: 1);
-            }
-
-            &:focus {
-                color: rgba($color: $solidWhite, $alpha: 1);
-            }
+        .contentContainer {
+            margin: 0 auto;
+            width: 65%;
         }
     }
 }
