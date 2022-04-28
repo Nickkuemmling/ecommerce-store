@@ -1,4 +1,3 @@
-/* _variables.scss */
 /* site fonts */
 /* if we set our root element font-size to 125%, then 1 rem = 20px */
 /* site colours */
@@ -206,18 +205,9 @@ template {
   display: none;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: "";
-  clear: both;
-  height: 0;
-}
-
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *, *:before, *:after {
@@ -252,7 +242,6 @@ html {
   left: 0;
 }
 
-/* _typography.scss */
 /* import Jakarta Sans font */
 @font-face {
   font-family: "Jakarta Sans";
@@ -270,7 +259,6 @@ html {
   font-family: "Young Serif";
   src: url("../fonts/youngserif/YoungSerif-Regular.otf");
 }
-/* _typography.scss */
 html {
   font-size: 125%;
 }
@@ -354,109 +342,6 @@ a {
   transition: 0.3s;
 }
 
-/* _typography.scss */
-/* import Jakarta Sans font */
-@font-face {
-  font-family: "Jakarta Sans";
-  src: url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff"), url("../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Regular.ttf"), url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Regular.woff2");
-  font-weight: normal;
-}
-/* import Jakarta Sans font in bold */
-@font-face {
-  font-family: "Jakarta Sans";
-  src: url("../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff"), url(../fonts/PlusJakarta_Sans-2.5/webfonts/PlusJakartaSans-Bold.woff2), url(../fonts/PlusJakarta_Sans-2.5/static/PlusJakartaSans-Bold.ttf);
-  font-weight: bold;
-}
-/* import Young Serif font */
-@font-face {
-  font-family: "Young Serif";
-  src: url("../fonts/youngserif/YoungSerif-Regular.otf");
-}
-/* _typography.scss */
-html {
-  font-size: 125%;
-}
-
-body {
-  font-family: "Jakarta Sans";
-  font-size: 1rem;
-  color: #084b6d;
-}
-
-h1,
-h2,
-h3,
-h4,
-blockquote {
-  font-family: "Young Serif";
-  font-weight: normal;
-  color: #084b6d;
-  margin: 0;
-}
-
-h1 {
-  font-size: 1.4rem;
-}
-
-h2 {
-  font-size: 2rem;
-  line-height: 2.4rem;
-  margin-bottom: 18px;
-}
-
-h3 {
-  font-size: 2.7rem;
-  line-height: 3rem;
-  margin-bottom: 24px;
-}
-
-h4 {
-  font-size: 1.7rem;
-  line-height: 2rem;
-  margin-bottom: 18px;
-}
-
-h5 {
-  font-size: 0.7rem;
-  font-weight: bold;
-  line-height: 1.2rem;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  margin: 0 0 24px 0;
-}
-
-p {
-  line-height: 1.5rem;
-  margin: 0 0 30px 0;
-}
-p.smallCopy {
-  font-size: 0.6rem;
-  line-height: 1.2rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-ul,
-li,
-a,
-input {
-  padding: 0;
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-/* _baseStyles.scss */
 .wrapper {
   max-width: 1260px;
   width: 90%;
@@ -520,6 +405,9 @@ button.menuIcon:focus {
   background-color: transparent;
 }
 
+a {
+  display: inline-block;
+}
 a.button {
   color: #084b6d;
   background-color: transparent;
@@ -541,7 +429,6 @@ a.button:focus {
   color: #fff;
 }
 
-/* _nav.scss */
 .navBar {
   position: sticky;
   top: 0;
@@ -592,77 +479,34 @@ a.button:focus {
   border-radius: 50%;
 }
 
-/* _footer.scss */
-footer {
-  background-color: #084b6d;
-  color: #fff;
-  padding: 90px 0 50px 0;
-}
-footer .footerFlexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+header {
+  background-color: #f8fbf3;
   margin-bottom: 90px;
-}
-footer .footerFlexContainer h4 {
-  color: #fff;
-}
-footer .footerNav {
-  width: 40%;
-}
-footer .footerNav nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-footer .footerNav nav ul {
-  width: 33%;
+header .headerImgContainer {
+  width: 45%;
 }
-footer .footerNav nav a {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
-  line-height: 1.5rem;
+header .headerImgContainer img {
+  max-width: 100%;
+  display: block;
 }
-footer .footerNav nav a:hover {
-  color: white;
+header .headerContent {
+  width: 55%;
+  color: #084b6d;
 }
-footer .footerNav nav a:focus {
-  color: white;
-}
-
-.footerNav {
-  width: 40%;
-}
-.footerNav nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.footerNav nav ul {
-  width: 33%;
-}
-.footerNav nav a {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
-  line-height: 1.5rem;
-}
-.footerNav nav a:hover {
-  color: white;
-}
-.footerNav nav a:focus {
-  color: white;
+header .headerContent .contentContainer {
+  margin: 0 auto;
+  width: 65%;
 }
 
-/* _sections.scss */
 .categoryGallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -707,4 +551,169 @@ footer .footerNav nav a:focus {
 }
 .categoryGallery .itemFour {
   background-color: #fff5f5;
+}
+
+.productsMainContent section {
+  padding: 75px 0;
+}
+.productsMainContent h2 {
+  text-align: center;
+}
+.productsMainContent .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.productsMainContent .products li {
+  -ms-flex-preferred-size: calc(33.3333333333% - 30px);
+      flex-basis: calc(33.3333333333% - 30px);
+  margin: 5px 15px;
+}
+.productsMainContent .products img {
+  border-radius: 10px;
+}
+.productsMainContent .products .popularProduct {
+  font-weight: bold;
+}
+.productsMainContent .products .discountedPrice {
+  text-decoration: line-through;
+  color: rgba(8, 75, 109, 0.5);
+}
+.productsMainContent .products .discountedPrice span {
+  display: inline-block;
+  text-decoration: none;
+  color: #084b6d;
+}
+
+.guarantees {
+  background-color: #fff5f5;
+  position: relative;
+}
+.guarantees h2 {
+  font-size: 0.8rem;
+}
+.guarantees h3 {
+  font-size: 0.6rem;
+}
+.guarantees p {
+  font-size: 0.5rem;
+  line-height: 1rem;
+}
+.guarantees img {
+  font-size: 30px;
+}
+.guarantees::before {
+  content: "";
+  background-color: #fff5f5;
+  background-image: url(../assets/wave-3.svg);
+  position: absolute;
+  background-position: top center;
+  background-repeat: repeat-x;
+  background-size: 1500px 60px;
+  height: 3rem;
+  right: 0;
+  left: 0;
+  top: -60px;
+}
+.guarantees ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.guarantees ul li {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px;
+  width: calc(25% - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+footer {
+  background-color: #084b6d;
+  color: #fff;
+  padding: 90px 0 50px 0;
+}
+footer .footerFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 90px;
+}
+footer .footerFlexContainer h4 {
+  color: #fff;
+}
+footer .footerNav {
+  width: 40%;
+}
+footer .footerNav nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footerNav nav ul {
+  width: 33%;
+}
+footer .footerNav nav a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+footer .footerNav nav a:hover {
+  color: white;
+}
+footer .footerNav nav a:focus {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    padding: 30px 0;
+  }
+}
+@media (max-width: 480px) {
+  .navBar {
+    padding: 0;
+  }
+  .navBar .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navBar .wrapper .menuIcon {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .navBar .wrapper > * {
+    margin: 0px;
+    padding: 10px 0px;
+  }
+  .navBar .searchCart button,
+.navBar .searchCart a,
+.navBar .searchCart div {
+    padding: 10px;
+    margin: 0 10px;
+  }
+  .navBar .searchCart .searchIcon {
+    margin-right: 0;
+  }
 }

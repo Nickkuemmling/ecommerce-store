@@ -1,28 +1,27 @@
-/* _header.scss */
-
 header {
-    background-color: $tertiary;
-    margin-bottom: 90px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+	background-color: $tertiary;
+	margin-bottom: 90px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 
-    .headerImgContainer {
-        width: 45%;
+	.headerImgContainer {
+		width: 45%;
 
-        img {
-            max-width: 100%;
-            vertical-align: middle;
-        }
-    }
+		img {
+			max-width: 100%;
+			// vertical-align: middle;
+			display: block;
+		}
+	}
 
-    .headerContent {
-        width: 55%;
-        color: $primary;
+	.headerContent {
+		width: 55%;
+		color: $primary;
 
-        .contentContainer {
-            margin: 0 auto;
-            width: 65%;
-        }
-    }
+		.contentContainer {
+			margin: 0 auto;
+			width: 65%;
+		}
+	}
 }
